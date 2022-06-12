@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+.navbar{
+    display:flex;
+
+}
+button{
+    color: white;
+    border-bottom: 10px;
+    border-color: white;
+    background-color: #35a900;
+    border-radius: 5px;
+    padding: 10px;
+}
+main{
+    display: flex;
+    text-align: center;
+    align-content: center;
+}
+main img{
+    width: 100%;
+}
+.btn__calculo button{
+    margin: 20px;
+}
+/*----------------------------------------*/
+.card{
+    margin: 10px;
+}
+
+.card img {
+    height: 50%;
+    
+    
+}

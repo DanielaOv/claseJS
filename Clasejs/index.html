@@ -10,12 +10,11 @@
 </head>
 <body>
     <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-          <a class="navbar-brand" href="#">Navbar</a>
+        <nav class="navbar navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">Fit-Today</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-        
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
@@ -76,7 +75,27 @@
         <div class="btn__calculo">
         <button onclick="calculo()">Consultá tu progreso</button>
         </div>
-        
+
+        <div class="login">
+          <form name='form-login'>
+      
+              <h1>REGISTER</h1>
+      
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" />
+
+              <label for="nombre">Password:</label>
+              <input type="text" id="password" />
+
+              <input type="button" onclick="guardarDatos()" value="Guardar datos" />
+ 
+              <p id="datos">Pulsa para ver tu nombre y tu password.</p>
+              <input type="button" onclick="recuperarDatos()" value="Recuperar datos" />
+      
+          </form>
+      </div>
+      <script src="js/login.js"></script>
+
         <div class="card-group">
             <div class="card">
               <img class="card-img-top" src="https://http2.mlstatic.com/D_NQ_NP_950377-MLA41048594703_032020-O.webp" alt="riñonera turquesa">
@@ -86,8 +105,10 @@
                 <p class="card-text"><small class="text-muted">$1.070 10% OFF
                     en 12x cuotas $218                   
                     pagando con Mercado Crédito</small></p>
-                    <button type="button" class="btn btn-primary btn-lg" onclick="datos()">Comprar</button>
-                    <button type="button" class="btn btn-secondary btn-lg">Detalle</button>
+                    <button type="button" class="btn btn-primary btn-lg" onclick="contadorClicks()">Comprar</button>
+                    <button type="button" class="btn btn-secondary btn-lg" onclick="resetearClicks()">Borrar carrito</button>
+                    
+                     
               </div>
             </div>
             <div class="card">
@@ -97,8 +118,9 @@
                 <p class="card-text">ingredientes: Dextrosa,Maltodextrina,Azúcar,Cloruro de sodio,Fosfato de potasio,Jugo de naranja</p>
                 <p class="card-text"><small class="text-muted">$ 3.500
                     en 12x$496.33</small></p>
-                    <button type="button" class="btn btn-primary btn-lg">Comprar</button>
-                    <button type="button" class="btn btn-secondary btn-lg">Detalle</button>    
+                    <button type="button" class="btn btn-primary btn-lg" onclick="contadorClicks()">Comprar</button>
+                    <button type="button" class="btn btn-secondary btn-lg" onclick="resetearClicks()">Borrar carrito</button>
+                    
               </div>
             </div>
             <div class="card">
@@ -108,11 +130,17 @@
                 <p class="card-text">Altura x Ancho x Profundidad: 45.5 cm x 22.5 cm x 5 cm</p>
                 <p class="card-text"><small class="text-muted">$2.970 10% OFF
                     en 12x $421.17</small></p>
-                    <button type="button" class="btn btn-primary btn-lg">Comprar</button>
-                    <button type="button" class="btn btn-secondary btn-lg">Detalle</button>
+                    <button type="button" class="btn btn-primary btn-lg" onclick="contadorClicks()">Comprar</button>
+                    <button type="button" class="btn btn-secondary btn-lg" onclick="resetearClicks()">Borrar carrito</button>
+                    
               </div>
+        
             </div>
           </div>
+          <div class="carrito">
+            <h3>Tu <br>Carrrito: </h3>
+          <input type="text" id="contador" value="vacio" onload="contadorClicks()"/>
+        </div>
     <script src="/js/miarchivo.js"></script>
 </body>
 </html>

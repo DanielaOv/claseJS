@@ -14,3 +14,5 @@ function resetearClicks() {
     document.getElementById("contador").value = "Vacio";
     
 }
+
+

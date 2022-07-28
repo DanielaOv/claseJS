@@ -11,7 +11,7 @@ function contadorClicks() {
 
 function resetearClicks() {
     localStorage.removeItem("contador");
-    document.getElementById("contador").value = "Vacio";
+    document.getElementById("contador").value = "-";
     
 }
 
